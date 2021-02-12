@@ -37,3 +37,6 @@ $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
 // Capability strings
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
+
+// Exciting Notifications
+$string['cheerup'] = 'Hey {$a}, you are an awesome Moodler';
