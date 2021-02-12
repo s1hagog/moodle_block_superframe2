@@ -39,4 +39,4 @@ $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
 
 // Exciting Notifications
-$string['cheerup'] = 'Hey {$a}, you are an awesome Moodler';
+$string['cheerup'] = '<p>Hey {$a}, you are an awesome Moodler</p>';
