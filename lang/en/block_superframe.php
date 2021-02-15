@@ -39,3 +39,6 @@ $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle'
 
 // Exciting Notifications
 $string['cheerup'] = 'Hey {$a}, you are an awesome Moodler';
+
+// Utility Strings
+$string['viewlink'] = 'View link';
