@@ -33,8 +33,12 @@ require_login();
 // Start output to browser.
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'block_superframe'), 5);
-// Dummy content.
-echo 'I am some dummy content, get rid of me fast';
+
+// Displaying user data
+echo $OUTPUT->user_picture($USER, array(
+    'size' => 50
+));
+echo fullname($USER) . '<br>';
 
 //send footer out to browser
 echo $OUTPUT->footer();
