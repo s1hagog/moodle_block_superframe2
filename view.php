@@ -40,5 +40,15 @@ echo $OUTPUT->user_picture($USER, array(
 ));
 echo fullname($USER) . '<br>';
 
+// Build and display an iframe.
+$url = 'https://quizlet.com/132695231/scatter/embed';
+$width = '600px';
+$height = '400px';
+$attributes = ['src' => $url,
+               'width' => $width,
+               'height' => $height];
+echo html_writer::start_tag('iframe', $attributes);
+echo html_writer::end_tag('iframe');
+
 //send footer out to browser
 echo $OUTPUT->footer();
