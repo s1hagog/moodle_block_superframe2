@@ -39,4 +39,11 @@ if($ADMIN->fulltree) {
     get_string('url', 'block_superframe'),
     get_string('url_details', 'block_superframe'),
     $defaulturl, PARAM_RAW));
+
+    // The height to be displayed
+
+    // The width to be displayed
+
+    // The page layout to be selected
+    
 }
