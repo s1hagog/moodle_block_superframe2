@@ -21,32 +21,22 @@
  * Modified for use in MoodleBites for Developers Level 1 by Richard Jones & Justin Hunt
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-require('../../config.php');
-$config = get_config('block_superframe');
-$PAGE->set_course($COURSE);
-$PAGE->set_url('/blocks/superframe/view.php');
-$PAGE->set_heading($SITE->fullname);
-$PAGE->set_pagelayout($config->pagelayout);
-$PAGE->set_title(get_string('pluginname', 'block_superframe'));
-$PAGE->navbar->add(get_string('pluginname', 'block_superframe'));
-require_login();
+defined('MOODLE_INTERNAL') || die();
 
-// Start output to browser.
-echo $OUTPUT->header();
-echo $OUTPUT->heading(get_string('pluginname', 'block_superframe'), 5);
+// Our default values.
+$defaulturl = 'https://quizlet.com/132695231/scatter/embed';
+$defaultheight = '400';
+$defaultwidth = '600';
 
-// Displaying user data
-echo $OUTPUT->user_picture($USER, array(
-    'size' => 50
-));
-echo fullname($USER) . '<br>';
+if($ADMIN->fulltree) {
+    // The heading to be displayed
+    $settings->add(new admin_setting_heading('sampleheader',
+    get_string('headerconfig', 'block_superframe'),
+    get_string('headerconfigdesc', 'block_superframe')));
 
-// Build and display an iframe.
-$attributes = ['src' => $config->url,
-               'width' => $config->width,
-               'height' => $config->height];
-echo html_writer::start_tag('iframe', $attributes);
-echo html_writer::end_tag('iframe');
-
-//send footer out to browser
-echo $OUTPUT->footer();
+    // The url to be displayed.
+    $settings->add(new admin_setting_configtext('block_superframe/url',
+    get_string('url', 'block_superframe'),
+    get_string('url_details', 'block_superframe'),
+    $defaulturl, PARAM_RAW));
+}
