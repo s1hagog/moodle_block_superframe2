@@ -34,9 +34,14 @@ $string['pluginname'] = 'Super frame';
 $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
 $string['viewlink'] = 'View link';
 $string['url'] = 'iFrame URL';
-$string['urldetails'] = 'Please provide a link (URL) to the iFrame you want to display';
 $string['headerconfig'] = 'SuperFrame Settings';
+$string['height'] = 'Height';
+$string['width'] = 'Width';
+$string['pagelayout'] = 'Page Layout';
+
+// Descriptions Strings
 $string['headerconfigdesc'] = 'Display settings of the most awesome and creative block in Moodle';
+$string['urldetails'] = 'Please provide a link (URL) to the iFrame you want to display';
 $string['heightdetails'] = 'Height of the frame (px)';
 $string['widthdetails'] = 'Width of the frame (px)';
 $string['pagelayoutdetails'] = 'Select preferred page layout';
