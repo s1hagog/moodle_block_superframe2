@@ -38,6 +38,11 @@ $string['headerconfig'] = 'SuperFrame Settings';
 $string['height'] = 'Height';
 $string['width'] = 'Width';
 $string['pagelayout'] = 'Page Layout';
+$string['custom'] = 'Custom';
+$string['small'] = 'Small';
+$string['medium'] = 'Medium';
+$string['large'] = 'Large';
+$string['size'] = 'Size';
 
 // Descriptions Strings
 $string['headerconfigdesc'] = 'Display settings of the most awesome and creative block in Moodle';
