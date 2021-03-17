@@ -66,5 +66,16 @@ $capabilities = array(
             'student' => CAP_ALLOW,
             'guest' => CAP_PREVENT
         )
+    ),
+    // Restrict access to view page link in the block.
+    'block/superframe:seeviewpagelink' => array(
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW,
+            'student' => CAP_PREVENT,
+            'guest' => CAP_PREVENT
+        )
     )
 );

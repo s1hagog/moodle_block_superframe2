@@ -56,6 +56,7 @@ $string['pagelayoutdetails'] = 'Select preferred page layout';
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
 $string['superframe:seeviewpage'] = 'Restrict viewing Super frame block page';
+$string['superframe:seeviewpagelink'] = 'Restrict displaying Super frame link';
 
 // Exciting Notifications
 $string['cheerup'] = 'Hey {$a}, you are an awesome Moodler';
