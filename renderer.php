@@ -31,6 +31,9 @@ class block_superframe_renderer extends plugin_renderer_base {
 
         // Page heading and iframe data.
         $data->heading = get_string('pluginname', 'block_superframe');
+        $data->userpic = $this->output->user_picture($USER, array(
+            'size' => 100
+        ));
         $data->url = $url;
         $data->height = $height;
         $data->width = $width;
@@ -40,9 +43,6 @@ class block_superframe_renderer extends plugin_renderer_base {
         echo $this->output->header();
 
         // Render the data in a Mustache template.
-        echo $this->output-> user_picture($USER, array(
-            'size' => 50
-        ));
         echo $this->render_from_template('block_superframe/frame', $data);
 
         // Finish the page.
