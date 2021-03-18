@@ -22,7 +22,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 require('../../config.php');
+
+// Get params
 $blockid = required_param('blockid', PARAM_INT);
+$courseid = required_param('courseid', PARAM_INT);
+
+// Page settings
 $def_config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
 $PAGE->set_url('/blocks/superframe/view.php');
@@ -73,4 +78,4 @@ switch ($config->size) {
 }
 
 $renderer = $PAGE->get_renderer('block_superframe');
-$renderer->display_view_page($url, $width, $height);
+$renderer->display_view_page($url, $width, $height, $courseid);
