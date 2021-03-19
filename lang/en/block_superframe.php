@@ -46,6 +46,10 @@ $string['size'] = 'Size';
 $string['backtocourse'] = "Go back to the course";
 $string['tablecaption'] = "Table caption";
 $string['poptext'] = "View table";
+$string['blockid'] = "Block ID";
+$string['blockname'] = "Block Name";
+$string['course'] = "Course Name";
+$string['catname'] = "Category Name";
 
 // Descriptions Strings
 $string['headerconfigdesc'] = 'Display settings of the most awesome and creative block in Moodle';
