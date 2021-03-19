@@ -44,6 +44,8 @@ $string['medium'] = 'Medium';
 $string['large'] = 'Large';
 $string['size'] = 'Size';
 $string['backtocourse'] = "Go back to the course";
+$string['tablecaption'] = "Table caption";
+$string['poptext'] = "View table";
 
 // Descriptions Strings
 $string['headerconfigdesc'] = 'Display settings of the most awesome and creative block in Moodle';
