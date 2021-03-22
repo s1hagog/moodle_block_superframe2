@@ -61,10 +61,12 @@ class block_superframe_renderer extends plugin_renderer_base {
         $data->text = get_string('viewlink', 'block_superframe');
         $data->welcometext = get_string('welcomeuser', 'block_superframe', $USER);
         $data->fullname = fullname($USER);
-
-        // Add a link to the popup page:
-        $data->popurl = new moodle_url('/blocks/superframe/block_data.php');
-        $data->poptext = get_string('poptext', 'block_superframe');
+        // Add a popup link to the block table.
+        $popurl = new moodle_url('/blocks/superframe/block_data.php');
+        $poplink = $this->output->action_link($popurl, get_string('poptext', 'block_superframe'), new popup_action('click', $popurl));
+        $data->poplink = $poplink;
+        $data->tableurl = new moodle_url('/blocks/superframe/tablemanager.php');
+        $data->tabletext = get_string('tabletext', 'block_superframe');
 
         //Return the data in a Mustache template.
         return $this->render_from_template('block_superframe/content', $data);

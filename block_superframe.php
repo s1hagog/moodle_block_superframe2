@@ -86,6 +86,7 @@ class block_superframe extends block_base {
         if(has_capability('block/superframe:seeviewpagelink', $context)){
             $renderer = $this->page->get_renderer('block_superframe');
             $this->content->text = $renderer->get_block_content($blockid, $courseid);
+            
         }
 
         return $this->content;
