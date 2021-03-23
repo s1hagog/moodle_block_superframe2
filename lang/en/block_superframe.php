@@ -68,3 +68,6 @@ $string['superframe:seeviewpagelink'] = 'Restrict displaying Super frame link';
 
 // Exciting Notifications
 $string['cheerup'] = 'Hey {$a}, you are an awesome Moodler';
+
+// Navigation API.
+$string['userlink'] = 'Installed blocks';
