@@ -29,6 +29,10 @@ class block_superframe_renderer extends plugin_renderer_base {
 
         $data = new stdClass();
 
+        // Start JS
+        $this->page->requires->js_call_amd('block_superframe/amd_modal', 'init');
+
+
         // Page heading and iframe data.
         $data->heading = get_string('pluginname', 'block_superframe');
         $data->userpic = $this->output->user_picture($USER, array(
@@ -40,6 +44,8 @@ class block_superframe_renderer extends plugin_renderer_base {
         $data->backurl = new moodle_url('/course/view.php', ['id' => $courseid]);
         $data->backtext = get_string('backtocourse', 'block_superframe');
         $data->fullname = fullname($USER);
+        // Link to the AMD modal.
+        $data->modallinktext = get_string('about', 'block_superframe');
 
         // Text for the links and the size parameter.
         $strings = array();

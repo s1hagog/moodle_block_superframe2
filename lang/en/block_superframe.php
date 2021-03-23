@@ -52,6 +52,7 @@ $string['blockname'] = "Block Name";
 $string['course'] = "Course Name";
 $string['catname'] = "Category Name";
 $string['tabletext'] = "Table Editing";
+$string['about'] = "About Superframe";
 
 // Descriptions Strings
 $string['headerconfigdesc'] = 'Display settings of the most awesome and creative block in Moodle';
