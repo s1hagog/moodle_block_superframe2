@@ -24,7 +24,7 @@
 
 class block_superframe_renderer extends plugin_renderer_base {
    
-    function display_view_page($url, $width, $height, $courseid) {
+    function display_view_page($url, $width, $height, $courseid, $blockid) {
         global $USER;
 
         $data = new stdClass();
@@ -40,6 +40,37 @@ class block_superframe_renderer extends plugin_renderer_base {
         $data->backurl = new moodle_url('/course/view.php', ['id' => $courseid]);
         $data->backtext = get_string('backtocourse', 'block_superframe');
         $data->fullname = fullname($USER);
+
+        // Text for the links and the size parameter.
+        $strings = array();
+        $strings[] = array(
+            'text' => get_string('custom', 'block_superframe'),
+            'size' => 'custom'
+        );
+        $strings[] = array(
+            'text' => get_string('small', 'block_superframe'),
+            'size' => 'small'
+        );
+        $strings[] = array(
+            'text' => get_string('medium', 'block_superframe'),
+            'size' => 'medium'
+        );
+        $strings[] = array(
+            'text' => get_string('large', 'block_superframe'),
+            'size' => 'large'
+        );
+
+        // Create the data structure for the links.
+        $links = array();
+        $link = new moodle_url('/blocks/superframe/view.php', ['courseid' => $courseid,
+                'blockid' => $blockid]);
+
+        foreach ($strings as $string) {
+            $links[] = ['link' => $link->out(true, ['size' => $string['size']]),
+                    'text' => $string['text'],];
+        }
+        
+        $data->linkdata = $links;
 
         // Start output to browser.
         echo $this->output->header();

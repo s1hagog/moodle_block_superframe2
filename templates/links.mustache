@@ -21,18 +21,24 @@
 
     Example context (json):
     {
-        "heading": "My superframe",
-        "url": "http://www.moodlebites.com",
-        "height": "400",
-        "width": "600"
+        "linkdata": [
+            {
+                "link": "http://example.com",
+                "text": "Go to smth"
+            },
+            {
+                "link": "http://google.com",
+                "text": "Go to google"
+            }
+        ],
     }
 }}
 <div  class="container">
-    <h5>{{heading}}</h5>
-    {{{userpic}}}
-    <h6>{{#str}} cheerup, block_superframe, {{fullname}} {{/str}}</h6>
-    {{> block_superframe/links}}
-    <iframe src="{{url}}" height="{{height}}" width="{{width}}">
-    </iframe>
-    <a href="{{{backurl}}}">{{backtext}}</a>
+    <ul class="list-inline">
+    {{#linkdata}}
+        <li class="list-inline-item">
+            <a href="{{{link}}}">{{text}}</a>
+        </li>
+    {{/linkdata}}
+    </ul>
 </div>
