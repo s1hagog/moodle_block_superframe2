@@ -90,7 +90,11 @@ class block_superframe_renderer extends plugin_renderer_base {
         // Page heading and iframe data.
         $data->url = new moodle_url('/blocks/superframe/view.php', ['blockid' => $blockid, 'courseid' => $courseid]);;
         $data->text = get_string('viewlink', 'block_superframe');
-        $data->welcometext = get_string('welcomeuser', 'block_superframe', $USER);
+
+        $name = $USER->firstname . ' ' . $USER->lastname;
+        $this->page->requires->js_call_amd('block_superframe/main', 'init', ['name' => $name]);
+
+        $data->welcometext = get_string('welcomeuser2', 'block_superframe', $name);
         $data->fullname = fullname($USER);
         // Add a popup link to the block table.
         $popurl = new moodle_url('/blocks/superframe/block_data.php');

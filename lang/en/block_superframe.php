@@ -32,6 +32,7 @@
 // General
 $string['pluginname'] = 'Super frame';
 $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
+$string['welcomeuser2'] = 'Welcome {$a}';
 $string['viewlink'] = 'View link';
 $string['url'] = 'iFrame URL';
 $string['headerconfig'] = 'SuperFrame Settings';
